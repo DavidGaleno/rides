@@ -2,7 +2,7 @@ from django.db import models
 
 class Station(models.Model):
     station = models.CharField(max_length=255)
-    station_number = models.IntegerField()
+    station_number = models.IntegerField(unique=True)
     station_name = models.CharField(max_length=255)
     lat = models.CharField(max_length=20)
     lon = models.CharField(max_length=20)
